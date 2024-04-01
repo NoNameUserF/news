@@ -1,0 +1,7 @@
+.container {
+    padding: 24px;
+    min-height: 100vh;
+}
+ul, li {
+     list-style-type: none;
+ }
