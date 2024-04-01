@@ -1,8 +1,12 @@
 
+import {FC} from "react";
 import {formatTimeAgo} from "../../helpers/formatTimeAgo.ts";
 import style from './style.module.css'
 
-export const NewsItem = ({item}) => {
+interface  IItem {
+    item:any
+}
+export const NewsItem:FC<IItem> = ({item}) => {
     return (
 
         <li className={style.item}>
