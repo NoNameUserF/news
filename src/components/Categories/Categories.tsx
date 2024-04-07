@@ -14,5 +14,3 @@ export const  Categories = ({categories, setSelectedCategory, selectedCategory}:
         </div>
     );
 }
-
-export default Categories;
