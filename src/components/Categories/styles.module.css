@@ -1,0 +1,34 @@
+.categories {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    align-items: flex-start;
+    white-space: nowrap;
+    scrollbar-width: none;
+    gap: 12px;
+}
+
+.category,.active  {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+    background-color: #F2F4F5;
+    cursor: pointer;
+}
+
+.active_category {
+    background-color: #E7E7FF;
+    color:#6B4EFF;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer
+}
+::-webkit-scrollbar  {
+    display: none;
+}
