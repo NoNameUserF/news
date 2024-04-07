@@ -26,8 +26,8 @@ export const getCategories =async  ()  => {
 
             }
         })
-        console.log(response.data.news)
-        return  await response.data
+        console.log(response.data.categories)
+        return  await response.data.categories
     }catch (error) {
         console.log(error)
     }

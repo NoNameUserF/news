@@ -11,7 +11,7 @@ import {Pagination} from "../components/Pagination/Pagination.tsx";
 import {Categories} from "../components/Categories/Categories.tsx"
 function Main() {
     const [news, setNews] = useState([])
-    const [categories, setCategories] = useState([])
+    const [categories, setCategories] = useState<string[]>([])
     const [selectedCategory, setSelectedCategory] = useState('All')
     const [loading, setLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
@@ -36,8 +36,9 @@ function Main() {
 
     const fetchCategories = async () => {
         try {
-            const res = await getCategories()
-            setCategories(["All" , ...res.categories])
+            const res : string[] = await getCategories()
+            console.log(res)
+            setCategories(["All" , ...res])
         } catch (e) {
             console.log(e)
         }
