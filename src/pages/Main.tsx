@@ -33,8 +33,8 @@ function Main() {
 
     const fetchCategories = async () => {
         try {
-            const res = await getCategories()
-            setCategories(res.categories)
+            const res  = await getCategories()
+            setCategories(['All' , ...res.categories])
         } catch (e) {
             console.log(e)
         }
