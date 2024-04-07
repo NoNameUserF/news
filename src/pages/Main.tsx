@@ -33,8 +33,8 @@ function Main() {
 
     const fetchCategories = async () => {
         try {
-            const response = await getCategories()
-            setCategories(response.categories)
+            const res = await getCategories()
+            setCategories(res.categories)
         } catch (e) {
             console.log(e)
         }
