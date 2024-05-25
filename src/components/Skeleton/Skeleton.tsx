@@ -1,22 +1,24 @@
-
 import styles from "./style.module.css";
 
 interface Props {
     type?: string;
     count?: number;
+    direction?: string
 
 }
 
 export const Skeleton = ({
-                      count = 1,
-                      type = "banner",
-                  }: Props) => {
+                             count = 1,
+                             type = "banner",
+                             direction = 'col'
+                         }: Props) => {
     return (
         <>
             {count > 1 ? (
                 <ul
                     className={
-                        styles.list
+                        direction === 'col'? styles.colList: styles.rowList
+
                     }
                 >
                     {[...Array(count)].map((_, index) => (
