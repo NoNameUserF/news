@@ -1,5 +1,4 @@
 import styles from './style.module.css';
-import { useState } from "react";
 import { getNews, getCategories } from "../API/apiNews.ts";
 import { NewsBannerWithSkeleton } from "../components/NewsBanner/NewsBanner.tsx";
 import { NewsListWithSkeleton } from '../components/NewsList/NewsList.tsx';
@@ -13,10 +12,6 @@ import  {useFilters} from "../helpers/hooks/useFilters.ts";
 
 
 function Main() {
-    const [selectedCategory, ] = useState('All');
-
-
-
     const{filters , changeFilters} = useFilters(
         {
             page_number: 1,
@@ -53,8 +48,8 @@ function Main() {
         <main className={styles.main}>
             {categoriesData ?
                 <Categories
-                    selectedCategory={selectedCategory}
-                    categories={['All' , ...categoriesData?.categories]}
+                    selectedCategory={filters.category}
+                    categories={[...categoriesData?.categories]}
                     setSelectedCategory={(category: string) => changeFilters('category' , category)}
                 />
              : null}
