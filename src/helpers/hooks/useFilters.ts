@@ -6,7 +6,7 @@ export const useFilters= (initialState : any) => {
 
 
     const changeFilters = (key : any ,value :any) =>  {
-        setFilters(prev  => {
+        setFilters((prev: any)  => {
             return  {
                 ...prev ,
                 [key] : value
