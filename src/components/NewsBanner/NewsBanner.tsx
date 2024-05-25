@@ -2,12 +2,10 @@ import {FC} from "react";
 import Image from '../ImageBanner/Image.tsx'
 import style from './style.module.css'
 import {formatTimeAgo} from "../../helpers/formatTimeAgo.ts";
-import {withSkeleton} from "../../helpers/hocks/withSkeleton.tsx";
 
 interface IItems {
     item : any
 }
-
 export const NewsBanner:FC<IItems> = ({item}) => {
     return (
         <div className={style.banner}>
@@ -17,4 +15,3 @@ export const NewsBanner:FC<IItems> = ({item}) => {
         </div>
     );
 }
-export const  NewsBannerWithSkeleton = withSkeleton(NewsBanner ,'banner', 1)
