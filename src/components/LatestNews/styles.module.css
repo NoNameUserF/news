@@ -1,0 +1,8 @@
+.latest_news {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 32px;
+    overflow: hidden;
+}

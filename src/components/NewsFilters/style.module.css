@@ -1,0 +1,5 @@
+.news_filters {
+    display: flex;
+    flex-direction:  column;
+    gap: 12px;
+}
