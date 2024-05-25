@@ -1,10 +1,11 @@
 import {FC} from "react";
 import styles from './styles.module.css'
 import {NewsItem} from "../NewsItem/NewsItem.tsx";
+import {withSkeleton} from "../../helpers/hocks/withSkeleton.tsx";
 interface INews {
     news:any
 }
-export const NewsList:FC<INews> = ({news}) => {
+ const NewsList:FC<INews> = ({news}) => {
     return (
         <div className={styles.list}>
             {news.map((item:any) => {
@@ -13,3 +14,5 @@ export const NewsList:FC<INews> = ({news}) => {
         </div>
     );
 };
+
+export const  NewsListWithSkeleton = withSkeleton(NewsList ,'item', 10)
