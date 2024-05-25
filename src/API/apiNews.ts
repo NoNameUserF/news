@@ -10,10 +10,11 @@ export const getNews =async  ({page_number = 1, page_size = 10 , category, keywo
                 page_number ,
                 page_size,
                 category,
-                keywords
+                keywords ,
             }
         })
-        console.log(response.data.news)
+
+
         return  await response.data
     }catch (error) {
         console.log(error)
@@ -27,8 +28,8 @@ export const getCategories =async  ()  => {
 
             }
         })
-        console.log(response.data.categories)
-        return  await response.data.categories
+        console.log(response.data)
+        return  await response.data
     }catch (error) {
         console.log(error)
     }

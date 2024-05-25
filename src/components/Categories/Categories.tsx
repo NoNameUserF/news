@@ -1,6 +1,7 @@
 import styles from './styles.module.css'
 
 export const  Categories = ({categories, setSelectedCategory, selectedCategory}: any) => {
+
     return (
         <div className ={styles.categories}>
             {categories.map((category: any) => {
