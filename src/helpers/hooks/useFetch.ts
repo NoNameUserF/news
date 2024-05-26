@@ -6,9 +6,8 @@ export const useFetch = (fetchingFunction:any, params?: any) => {
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(false)
 
-
-    console.log(data)
     const stringParams=  params  ? new URLSearchParams(params).toString() : ''
+
     useEffect(() => {
         (async () => {
             try {
