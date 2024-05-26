@@ -28,9 +28,25 @@ export const getCategories =async  ()  => {
 
             }
         })
-        console.log(response.data)
         return  await response.data
     }catch (error) {
         console.log(error)
     }
 }
+
+export const getLatestNews =async  ()  => {
+    try {
+        const response  = await axios.get(`${baseURL}latest-news`, {
+            params : {
+                apiKey : apiKey,
+            }
+        })
+        console.log(response.data)
+        return  await response.data
+
+
+    }catch (error) {
+        console.log(error)
+    }
+}
+
